@@ -32,9 +32,15 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
 
+    const renderMermaid = async () => {
+      await window.mermaid.run({
+          querySelector: '.language-mermaid',
+      });
+    };
 
     syntaxHighlight();
     renderMath();
+    renderMermaid();
     var previewWindow = document.getElementById('markdown-preview');
     var webSocketUrl = 'ws://' + window.location.host;
 
@@ -45,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('markdown-preview').innerHTML = event.data;
         syntaxHighlight();
         renderMath();
+        renderMermaid();
     }
 
     socket.onclose = function(event) {

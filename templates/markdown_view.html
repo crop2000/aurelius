@@ -30,6 +30,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js"></script>
     <script src="/__/js/markdown_client.js"></script>
+    <script type="module">
+      import mermaid from "https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.esm.mjs";
+      mermaid.initialize({startOnLoad: false});
+      window.mermaid = mermaid;
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
   </body>
 </html>
